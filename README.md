@@ -15,10 +15,13 @@ Initial specification given:
 
 ## User stories
 
-
-First user story
 ```
-As a user
-So I can view all my stored bookmarks
-I would like to see a list of bookmarks
+As a User
+So I can view all my stored Bookmarks
+I would like to see a list of Bookmarks
+```
+```
+As a User
+So I can update my favourite Bookmarks
+I would like to be able to add a new Bookmark
 ```
