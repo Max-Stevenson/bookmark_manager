@@ -25,3 +25,4 @@ As a User
 So I can update my favourite Bookmarks
 I would like to be able to add a new Bookmark
 ```
+To see domain model, please see model.png.
