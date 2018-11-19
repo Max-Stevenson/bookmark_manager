@@ -10,6 +10,7 @@ gem 'capybara'
 gem 'rspec'
 gem 'sinatra'
 gem 'selenium-webdriver'
+gem 'rubocop'
 
 group :test do
 
