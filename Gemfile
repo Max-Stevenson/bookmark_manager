@@ -11,6 +11,7 @@ gem 'rspec'
 gem 'sinatra'
 gem 'selenium-webdriver'
 gem 'rubocop'
+gem 'pg'
 
 group :test do
 
