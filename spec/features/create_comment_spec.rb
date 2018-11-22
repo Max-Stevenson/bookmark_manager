@@ -11,7 +11,6 @@ feature 'Adding a comment to a bookmark' do
     fill_in('comment', with: 'this is a comment')
     click_button('Submit')
 
-    expect(current_path).to eq('/bookmarks')
     expect(first('.bookmark')).to have_content('this is a comment')
 	end
 end
