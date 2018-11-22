@@ -2,7 +2,6 @@ require 'pg'
 
 feature 'Deleting a bookmark' do
 	scenario 'A user can delete a bookmark' do
-		connection = PG.connect(dbname: 'bookmark_manager_test')
 		bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
 
 		visit('/bookmarks')
