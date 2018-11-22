@@ -1,4 +1,5 @@
 require 'pg'
+require 'uri'
 
 class Bookmark
 
@@ -18,8 +19,12 @@ class Bookmark
   end
 
   def self.create(url:, title:)
-  	result = DatabaseConnection.query("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING id, url, title")
-  	Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+    if url =~ URI::regexp
+      result = DatabaseConnection.query("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING id, url, title")
+      Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+    else
+      false
+    end
 	end
 
   def self.delete(id:)
